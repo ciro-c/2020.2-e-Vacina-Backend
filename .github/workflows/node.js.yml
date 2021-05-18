@@ -32,9 +32,6 @@ jobs:
     - name: Running test
       run: npx jest --detectOpenHandles --testTimeout=15000
 
-    - name: Generating test report
-      run: npx jest --coverage
-
     - name: Sending the results to codecov
       run: bash <(curl -s https://codecov.io/bash) -t ${{secrets.CODECOV_TOKEN}}
 
