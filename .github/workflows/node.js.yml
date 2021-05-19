@@ -26,10 +26,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: teste
       env:
         SECRET: ${{secrets.SECRET}}
-    - name: teste
       run: echo "Hallo $SECRET, ${{secrets.SECRET}}, ${{env.SECRET}}"
+   
     - name: Npm Install
       run: npm install
 
