@@ -28,10 +28,10 @@ jobs:
 
       env:
         SECRET: ${{secrets.SECRET}}
-
+    - name: teste
+      run: echo "Hallo $SECRET "
     - name: Npm Install
       run: npm install
-      run: echo "Hallo $SECRET "
 
     - name: Running test
       run: npm run test
