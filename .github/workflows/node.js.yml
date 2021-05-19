@@ -30,8 +30,8 @@ jobs:
       run: npm install
 
     - name: Running test
-      run: npx jest  --ci --runInBand --detectOpenHandles --testTimeout=15000
-
+      run: npm test
+      
     - name: Sending the results to codecov
       run: bash <(curl -s https://codecov.io/bash) -t ${{secrets.CODECOV_TOKEN}}
 
