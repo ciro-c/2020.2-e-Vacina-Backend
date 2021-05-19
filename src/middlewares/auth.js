@@ -5,7 +5,7 @@ const authConfig = process.env.SECRET;
 
 module.exports = (request, response, next) => {
   const authHeader = request.headers.authorization;
-
+  console.log(authConfig);
   if(!authHeader) return response.status(401).send({error:'No token provided'});
 
   const parts = authHeader.split(' ');
