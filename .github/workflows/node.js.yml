@@ -37,7 +37,7 @@ jobs:
     - name: Running test
       env:
         SECRET: ${{secrets.SECRET}}
-      run: npm run test
+      run: npx jest --runInBand --coverage
 
     - name: Sending the results to codecov
       run: bash <(curl -s https://codecov.io/bash) -t ${{secrets.CODECOV_TOKEN}}
